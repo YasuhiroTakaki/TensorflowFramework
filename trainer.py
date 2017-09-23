@@ -21,10 +21,12 @@ from common import metrics
 import dataset.cifar10
 import dataset.cifar100
 import dataset.mnist
+import dataset.flowers5
 
 import model.alexnet
 import model.allconv
 import model.resnet
+import model.mobilenet_v1
 
 tf.logging.set_verbosity(tf.logging.INFO)
 
@@ -46,13 +48,15 @@ FLAGS = tf.flags.FLAGS
 MODELS = {
   "alexnet": model.alexnet,
   "allconv": model.allconv,
-  "resnet": model.resnet
+  "resnet": model.resnet,
+  "mobilenet_v1": model.mobilenet_v1
 }
 
 DATASETS = {
   "cifar10": dataset.cifar10,
   "cifar100": dataset.cifar100,
   "mnist": dataset.mnist,
+  "flowers5": dataset.flowers5,
 }
 
 
